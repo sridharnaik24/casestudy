@@ -1,0 +1,55 @@
+
+ <div>
+  
+    <button class="order" routerLink="/login">Login</button>
+        <button class="Reg" routerLink="/signup">Register</button>
+        </div>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Electronics')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqtJVaNJ6I0pouUNmq8vufAVDkbpWyqHH0TQ&usqp=CAU" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Fashion')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Jewelley')">
+                <img src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
+                <h6>Jewellery</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Books')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuAlKdlsqXNhjaNWdKMLP0ezJXpFFSKz04XA&usqp=CAU" alt="">
+                <h6>Books</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+                <img src="{{item.prodImage}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.prodName}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.prodDescrption}}</p>
+                <p><strong>Price:</strong> {{item.prodPrice|currency:'INR':'symbol'}}</p>
+                <button class="btn bg-secondary" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

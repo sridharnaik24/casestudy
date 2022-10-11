@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  
+
+
+ 
+  <!--div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+      <i style="font-size: 30px;" class="">&nbsp;
+        </i>
+        <strong style="font-size: 30px;">Sonata E-store</strong>
+        
+       
+     
+  
+    </div>
+    </div-->
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="navbar-brand align-item-center d-flex">
+        <i style="font-size: 40px;" class="">&nbsp;
+          </i>
+          <strong style="font-size: 40px;">Sonata E-store</strong>
+          </div>
+          </div>
+
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+      <div class="col-md-12 text-center">
+        <h3 class="animate-charcter"> REGISTRATION FORM</h3>
+        </div>
+        <form class="Login"#userPost = "ngForm" (ngSubmit)="onSubmit(userPost.value)">
+        <input type="text" name="user_name" ngModel placeholder="UserName" required><br>
+        <input type="text" name="user_phone" ngModel placeholder="UserPhone"required><br>
+        <input type="text" name="user_email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" ngModel placeholder="UserEmail"required><br>
+        
+        <input type="text" name="user_address" ngModel placeholder="UserAddress"required><br>
+        <input type="password" name="user_password" ngModel placeholder="UserPassword"required><br>
+        <div><button type="submit">Submit data</button></div>
+       
+      
+      </form><br/>
+      <a routerLink="/login">Existing User? Click Here!</a>
+     
+      </div>
+		  <div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

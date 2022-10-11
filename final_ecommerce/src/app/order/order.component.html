@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="screen">
+    <div class="screen__content">
+<h2 >Order details</h2>
+<form  #userPost = "ngForm" (ngSubmit)="placeOrder()">
+
+    <div class="form-group">
+        
+      <label for="user_phone"> Enter contact number</label><br>
+      <input type="user_phone" class="form-control" [(ngModel)]="order.order_id" name="order.order_id" placeholder="Phone no.">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Enter your shipping address</label>
+        <textarea class="form-control" [(ngModel)]="order.user_address" name="order.user_address" rows="3"></textarea>
+      </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Select the Mode of payment</label>
+      <select class="form-control" [(ngModel)]="order.payment" name="order.payment">
+    
+        <option>cod</option>
+        <option>others</option>
+     
+      </select>
+    </div>
+      <br>
+      <div>
+        <div><button class="order"type="submit" >Place Order</button></div>
+    
+
+
+    
+    
+
+</div></form>
+</div>
+</div>
+
+
+
